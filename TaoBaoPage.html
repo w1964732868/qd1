@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝首页</title>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            text-align:center;//文本对齐方式
+        font-family: "微软雅黑";
+            font-size: 11px;
+        }
+
+
+
+        .navigation{
+            width: 100%;
+            height:40px;
+            background-color:#F5F5F5;
+        }
+        .nav-left{
+            width: 18%;
+            padding-left: 20%;
+            float: left;
+        }
+        .nav-left1{
+            margin-top: 12px;
+            float: left;
+            margin-right: 18px;
+        }
+        .nav-left2{
+            float: left;
+            color: red;
+            margin-right:10px;
+            line-height: 40px;//文字垂直居中
+        }
+        .nav-left3{
+            float: left;
+            color: black;
+            margin-right:10px;
+            line-height: 40px;//文字垂直居中
+        }
+        .nav-left4{
+            float: right;
+            color: black;
+            line-height: 40px;//文字垂直居中
+        }
+        a{
+            text-decoration: none;//去掉a下划线
+        }
+        a:link{
+            color: black;
+        }
+        a:hover{
+            color: red;
+        }
+
+
+
+        .nav-right{
+            width: 42%;
+            float: right;
+            padding-right: 20%;
+            cursor: pointer;
+        }
+        .nav-right1,.nav-right3,.nav-right5,.nav-right6{
+            margin-top: 12px;
+            margin-left: 15px;
+        }
+        .nav-right2,.nav-right4{
+            color: black;
+            line-height: 40px;//文字垂直居中
+        margin-left: 15px;
+        }
+        /*div里面的文字变颜色*/
+        .nav-right7{
+            margin-top: 12px;
+        }
+        /*cursor: pointer;*/
+        select option:hover{color: red;}
+
+
+
+
+
+        /*淘宝图片*/
+        .search{
+            width: 100%;
+            height:90px;
+            background-color: white;
+        }
+        .search-left{
+            padding-left: 20%;
+            float: left;
+            margin-right: 18px;
+        }
+        .search-left2{
+            margin-top: 30px;
+            border:2px solid;
+            border-color: red;
+            float: left;
+            border-radius:5px;
+            height: 30px;
+            width: 400px;
+            margin-left: 100px;
+        }
+        .search-left22{
+            margin-top: 30px;
+            height: 30px;
+            width: 30px;
+            float: left;
+            border-radius: 5px;
+        }
+
+
+        .nn{
+            height: 5px;
+            background-color:white ;
+        }
+
+
+        /*下面的超练级*/
+        .nav1{
+            width:100%;
+            height:30px;
+            background-color: darkorange;
+        }
+        .nav11{
+            font-size: 12px;
+            height:30px;
+            width: 220px;
+            background-color: red;
+            margin-left: 20%;
+            color: white;
+            line-height: 30px;
+            float: left;
+            margin-right: 90px;
+        }
+
+        .nav12,.nav13,.nav14,.nav15,.nav16,.nav17,.nav18,.nav19,.nav20,.nav21,.nav22{
+            font-size: 12px;
+            float: left;
+            line-height: 30px;
+            margin-right: 10px;
+            color: white;
+        }
+
+
+
+        /*中间部分*/
+        .middle{
+            width: 100%;
+            padding-top: 10px;
+            background-color: white;
+        }
+
+        .m1{
+            margin-left: 20%;
+            float: left;
+            height:500px;
+            width: 220px;
+            border: 1px solid;
+            border-color: red;
+        }
+        /*.m1-1:hover{*/
+        /*color: red;*/
+        /*}*/
+        .m11,.m12,.m13,.m14,.m15,.m16,.m17,.m18,.m19,.m20,.m21,.m22,.m23,.m24,.m25,.m26,.m27,.m28,.m29,.m30,.m31,.m32,.m33,.m34,.m35,.m36,.m37,.m38,.m39,.m40,.m41,.m42,.m43,.m44,.m45,.m46,.m47,.m48,.m49,.m50,.m51,.m52,.m53,.m54,.m55,.m56,.m57,.m58{
+            /*height: 6px ;*/
+            float: left;
+            margin-right: 18px;
+        }
+        .hhh23{
+            width: 521px;
+            height:500px;
+            float: left;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .m2{
+            margin-bottom: 15px;
+            width: 521px;
+            height:283px;
+        }
+        .m3{
+            width: 521px;
+            height:200px;
+        }
+
+        .hhh45{
+            margin-left: 10px;
+            width:162px;
+            height:500px;
+            float: right;
+            padding-right: 18%;
+        }
+        .m4{
+            margin-bottom: 15px;
+            width: 162px;
+            height: 283px;
+        }
+        .m5{
+            width:162px;
+            height: 203px;
+        }
+    </style>
+</head>
+<body>
+<!--导航栏-->
+<div class="navigation">
+    <div class="nav-left">
+        <select class="nav-left1">
+            <option value="0">全球</option>
+            <option value="1" selected>中国大陆</option>
+            <option value="2">香港</option>
+            <option value="3">台湾</option>
+            <option value="4">澳门</option>
+            <option value="5">韩国</option>
+            <option value="6">马来西亚</option>
+            <option value="7">新加坡</option>
+            <option value="8">新西兰</option>
+            <option value="9">日本</option>
+            <option value="10">美国</option>
+        </select>
+
+        <a href="#" class="nav-left2">亲，请登录</a>
+        <a href="#" class="nav-left3">免费注册</a>
+        <a href="#" class="nav-left4">手机逛淘宝</a>
+    </div>
+    <!--<div class="nav-mod"></div>-->
+    <div class="nav-right">
+        <select class="nav-right1">
+            <option value="0" selected>我的淘宝</option>
+            <option value="1">已买到宝贝</option>
+            <option value="2">我的足迹</option>
+        </select>
+        <a href="#" class="nav-right2">购物车</a>
+        <select class="nav-right3">
+            <option value="0" selected>收藏夹</option>
+            <option value="1">收藏的宝贝</option>
+            <option value="2">收藏的店铺</option>
+        </select>
+        <a href="#" class="nav-right4">商品分类</a>
+        <select class="nav-right5">
+            <option value="0" selected>买家中心</option>
+            <option value="1">收藏的宝贝</option>
+            <option value="2">收藏的店铺</option>
+        </select>
+        <select class="nav-right6">
+            <option value="0" selected>联系客服</option>
+            <option value="1">收藏的宝贝</option>
+            <option value="2">收藏的店铺</option>
+        </select>
+        <select class="nav-right7">
+            <option value="0" selected>网站导航</option>
+            <option value="1">收藏的宝贝</option>
+            <option value="2">收藏的店铺</option>
+        </select>
+    </div>
+</div>
+
+<!--淘宝搜索-->
+<div class="search">
+    <a href="http://localhost:63342/MysqL/TaoBaoPage.html" class="search-left"><img src="img/淘宝.png" alt=""></a>
+    <input type="search" placeholder="请输入关键词"  class="search-left2" maxlength="100" autocomplete="on">
+    <input type="button" value="搜索" class="search-left22">
+</div>
+<div class="nn"></div>
+
+<div class="nav1">
+    <div class="nav11">主题市场</div>
+    <a href="#" class="nav12">天猫</a>
+    <a href="#" class="nav13">聚划算</a>
+    <a href="#" class="nav14">天猫超市  |</a>
+    <a href="#" class="nav15">淘抢购</a>
+    <a href="#" class="nav16">电器城</a>
+    <a href="#" class="nav17">司法拍卖</a>
+    <a href="#" class="nav18">淘宝心选</a>
+    <a href="#" class="nav19">兴农扶贫   |</a>
+    <a href="#" class="nav20">飞猪旅行</a>
+    <a href="#" class="nav21">智能生活</a>
+    <a href="#" class="nav22">苏宁易购</a>
+
+</div>
+<div class="middle">
+    <div class="m1">
+        <a href="#" class="m11">女装&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m12">男装&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m13">内衣</a>
+        <br/>
+
+        <a href="#" class="m14">鞋靴&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m15">箱包&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m16">配件</a>
+        <br/>
+
+        <a href="#" class="m17">童装玩具&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m18">孕产&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m19">用品</a>
+        <br/>
+
+        <a href="#" class="m20">家电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m21">数码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m22">手机</a>
+        <br/>
+
+        <a href="#" class="m23">美妆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m24">洗护&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m25">保健品</a>
+        <br/>
+
+
+        <a href="#" class="m26">珠宝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m27">眼镜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m28">手表</a>
+        <br/>
+
+        <a href="#" class="m29">运动&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m30">户外&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m31">乐器</a>
+        <br/>
+
+        <a href="#" class="m32">游戏&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m33">动漫&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m34">影视</a>
+        <br/>
+
+        <a href="#" class="m35">美食&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m36" >生鲜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m37">零食</a>
+        <br/>
+
+        <a href="#" class="m38">鲜花&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m39">宠物&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m40">农资</a>
+        <br/>
+
+        <a href="#" class="m41">工具&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m42">装修&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m43">建材</a>
+        <br/>
+
+        <a href="#" class="m44">家具&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m45">家饰&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m46">家纺</a>
+        <br/>
+
+        <a href="#" class="m47">汽车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m48">二手车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m49">用品</a>
+        <br/>
+
+        <a href="#" class="m50">汽车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m51">DIY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m52">五金电子</a>
+        <br/>
+
+        <a href="#" class="m53">百货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m54">餐厨&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m55">家庭保健</a>
+        <br/>
+
+        <a href="#" class="m56">学习&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m57">卡券&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a>
+        <a href="#" class="m58">本地服务</a>
+        <br/>
+    </div>
+    <div class="hhh23">
+        <div class="m2"><img src="img/图片.png" alt=""></div>
+        <div class="m3"><img src="img/图片1.png" alt=""></div>
+    </div>
+
+    <div class="hhh45">
+        <div class="m4"><img src="img/图片2.png" alt=""></div>
+        <div class="m5"><img src="img/图片3.png" alt=""></div>
+    </div>
+
+    <div class="m6"><img src="img/图片4.png" alt=""></div>
+</div>
+
+
+
+
+<div class="panel-haodian df jcsb">
+    <div class="left">
+        <div class="head df aic">
+            <img src="img/好店.png" alt="" class="img">
+            <p class="t">发现深藏的好店</p>
+        </div>
+        <div class="foot">
+            <div class="hd df jcsa">
+                <div class="lt">
+                    <div class="h df aic">
+                        <a href="#" class="t">今日推荐</a>
+                        <a href="#" class="tx">暂无店铺评价</a>
+                    </div>
+                    <div class="f df jcsa">
+                        <div><a href="#"><img src="img/图11.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#" class="r1"><img src="img/图12.png" alt="" class="img"></a>
+                            <a href="#" class="r2"><img src="img/图13.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rt">
+                    <div class="h df aic">
+                        <a href="#" class="t">女神の店</a>
+                        <a href="#" class="tx">暂无店铺评价</a>
+                    </div>
+                    <div class="f df jcsa">
+                        <div><a href="#"><img src="img/图21.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#"><img src="img/图22.png" alt="" class="img"></a>
+                            <a href="#"><img src="img/图23.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ft df jcsa">
+                <div class="hd">
+                    <div class="h df aic">
+                        <a href="#" class="t">今日推荐</a>
+                        <a href="#" class="tx">暂无店铺评价</a>
+                    </div>
+                    <div class="ft df">
+                        <div><a href="#"><img src="img/图31.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#" class="r1"><img src="img/图32.png" alt="" class="img"></a>
+                            <a href="#" class="r2"><img src="img/图33.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="f">
+                    <div class="fh df aic">
+                        <a href="#" class="t">女神の店</a>
+                        <a href="#" class="tx">暂无店铺评价</a>
+                    </div>
+                    <div class="ff df">
+                        <div class="lt"><a href="#"><img src="img/图41.png" alt="" class="img"></a></div>
+                        <div class="rt">
+                            <a href="#"><img src="img/图42.png" alt="" class="img"></a>
+                            <a href="#"><img src="img/图43.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="head df aic">
+            <img src="img/淘宝直播.png" alt="" class="img">
+            <p class="t">发现深藏的好店</p>
+        </div>
+        <div class="foot">
+            <div class="hd df jcsa">
+                <div class="lt">
+                    <div class="h df aic">
+                        <a href="#" class="t">胖哥小洲</a>
+                        <a href="#" class="tx">1857观看</a>
+                    </div>
+                    <div class="f df jcsa">
+                        <div><a href="#"><img src="img/图11.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#" class="r1"><img src="img/图12.png" alt="" class="img"></a>
+                            <a href="#" class="r2"><img src="img/图13.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rt">
+                    <div class="h df aic">
+                        <a href="#" class="t">瑞瑞家品牌折扣</a>
+                        <a href="#" class="tx">1406观看</a>
+                    </div>
+                    <div class="f df jcsa">
+                        <div><a href="#"><img src="img/图21.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#"><img src="img/图22.png" alt="" class="img"></a>
+                            <a href="#"><img src="img/图23.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ft df jcsb">
+                <div class="hd">
+                    <div class="h df aic">
+                        <a href="#" class="t">彩色娃娃amy</a>
+                        <a href="#" class="tx">39408观看</a>
+                    </div>
+                    <div class="b df">
+                        <div ><a href="#"><img src="img/图31.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#" class="r1"><img src="img/图32.png" alt="" class="img"></a>
+                            <a href="#" class="r2"><img src="img/图33.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft">
+                    <div class="fh df aic">
+                        <a href="#" class="t">小妖的衣橱</a>
+                        <a href="#" class="tx">10267观看</a>
+                    </div>
+                    <div class="ff df">
+                        <div class="lt"><a href="#"><img src="img/图41.png" alt="" class="img"></a></div>
+                        <div class="rt">
+                            <a href="#"><img src="img/图42.png" alt="" class="img"></a>
+                            <a href="#"><img src="img/图43.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel-haohuo df jcsb">
+    <div class="lt">
+        <div class="hd df">
+            <img src="img/有好货.png" alt="" class="img">
+            <p class="t">与品质生活不期而遇</p>
+        </div>
+        <div class="ft df jcsa">
+            <div class="f">
+                <a href="#"><img src="img/衣服1.png" alt=""></a>
+                <a href="#" style="display:block;width: 170px;height:28px;font-size: 16px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;">MeetMetro 宽松立领套头上衣</a>
+                <a href="#"  class = "tx">高领贴身设计，呈现纤长美颈凸显优雅唯美。</a>
+            </div>
+
+            <div class="f">
+                <a href="#"><img src="img/衣服2.png" alt=""></a>
+                <a href="#" class = "t">Lonely Walk 抽绳工装束脚裤</a>
+                <a href="#"  class = "tx">立体剪裁设计，突显宽松休闲。</a>
+            </div>
+
+            <div class="f">
+                <a href="#"><img src="img/衣服3.png" alt=""></a>
+                <a href="#" class = "t">INSIDE 简约纯色宽松直筒牛仔裤</a>
+                <a href="#"  class = "tx">品牌皮标清晰硬朗，装饰衣身显品味。</a>
+            </div>
+        </div>
+        <div class="ft df jcsa">
+            <div class="f">
+                <a href="#"><img src="img/衣服4.png" alt=""></a>
+                <a href="#" class = "t">LA MER奢宠修护套装</a>
+                <a href="#"  class = "tx">绵密精华乳霜，冰淇淋般的质地，融入肌底。深度滋养的面霜，促进肌肤修护焕新。浓缩修复精华露，裹覆肌肤，舒缓敏感干燥。</a>
+            </div>
+
+            <div class="f">
+                <a href="#"><img src="img/衣服5.png" alt=""></a>
+                <a href="#" class = "t">惠尔顿 五点式车载儿童安全座椅</a>
+                <a href="#"  class = "tx">实心注塑椅身，防撞抗压，更好保护安全。</a>
+            </div>
+
+            <div class="f">
+                <a href="#"><img src="img/衣服6.png" alt=""></a>
+                <a href="#" class = "t">ER大码飞行夹克</a>
+                <a href="#"  class = "tx">字母刺绣工艺，细节彰显品质，潮流感倍增。</a>
+            </div>
+        </div>
+    </div>
+    <div class="rt">
+        <div class="hd df">
+            <img src="img/爱逛街.png" alt="" class="img">
+            <p class="haowenzi">献给聪明可爱的你</p>
+        </div>
+        <div class="ft df jcsa">
+            <div class="f">
+                <a href="#"><img src="img/衣服r1.png" alt=""></a>
+                <a href="#" class = "t">Oball奥波球 奥波滚滚乐婴儿健身推行学步柔软手抓球</a>
+                <a href="#"  class = "tx">放飞自我的兔小姐</a>
+            </div>
+
+            <div class="f">
+                <a href="#"><img src="img/衣服r2.png" alt=""></a>
+                <a href="#" class = "t">【预售】固特威汽车底盘装甲保护剂非自喷防锈胶隔音胶防腐颗粒胶</a>
+                <a href="#"  class = "tx">潮范时光机</a>
+            </div>
+
+            <div class="f">
+                <a href="#"> <img src="img/衣服r3.png" alt=""></a>
+                <a href="#" class = "t">美国Gofit肌肉按摩棒健身瑜伽滚轴筋膜棒滚轮瘦小腿运动放松狼牙</a>
+                <a href="#"  class = "tx">潮流女孩girl</a>
+            </div>
+        </div>
+        <div class="ft df jcsa">
+            <div class="f">
+                <a href="#"><img src="img/衣服r4.png" alt=""></a>
+                <a href="#" class = "t">51783 户外军迷用品迷彩战术背心轻量化特种兵战术马甲真人CS装备</a>
+                <a href="#">放飞自我的兔小姐</a>
+            </div>
+
+            <div class="f">
+                <a href="#"><img src="img/衣服r5.png" alt=""></a>
+                <a href="#" class = "t">十月妈咪孕妇内衣套装怀孕期莫代尔舒适有型哺乳文胸孕妇内衣内裤</a>
+                <a href="#"  class = "tx">爱逛***01</a>
+            </div>
+
+            <div class="f">
+                <a href="#"><img src="img/衣服r6.png" alt=""></a>
+                <a href="#" class = "t">日单欧美风鞋楦造型女士橡胶雨鞋高筒中筒4色入 微瑕疵随机发送</a>
+                <a href="#"  class = "tx">放飞自我的兔小姐</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="panel-navigation df">
+    <div class="navigation df">
+        <div class="lt df ">
+            <a href="#" class="l df aic">主题市场</a>
+        </div>
+        <div class="rt df">
+            <a href="#" class="r df aic">聚划算</a>
+            <a href="#" class="r i df aic">天猫超市  |</a>
+            <a href="#" class="r df aic">淘抢购</a>
+            <a href="#" class="r df aic">电器城</a>
+            <a href="#" class="r i df aic">司法拍卖</a>
+            <a href="#" class="r i df aic">淘宝心选</a>
+            <a href="#" class="r i df aic">兴农扶贫   |</a>
+            <a href="#" class="r i df aic">飞猪旅行</a>
+            <a href="#" class="r i df aic">智能生活</a>
+            <a href="#" class="r i df aic">苏宁易购</a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+

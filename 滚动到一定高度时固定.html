@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style type="text/css">
+        body{
+            width:40em;
+            margin:0 auto;
+        }
+        p{
+            line-height:3em;
+        }
+        .tby{
+            width: 475px;
+            height: 36px;
+            padding-left: 20px;
+            border:2px solid;
+            border-color: red;
+            border-top-left-radius:20px;
+            border-bottom-left-radius:20px;
+            margin: 10px -16px;
+        }
+        .txby{
+            cursor:pointer;
+            font-size: 18px;
+            width: 75px;
+            height: 40px;
+            background-color: orangered;
+            color: white;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            margin: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+<article>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这里会滚动</p>
+    <p>这里会滚动</p>
+    <p>这里会滚动</p>
+    <div id="dyfixed">
+        <input type="text" class="iconfont icon-sousuo tby" placeholder="请输入关键词">
+        <input type="button" class="txby" value="搜索">
+    </div>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>内容</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+</article>
+<script type="text/javascript">
+    window.onload=
+            function(){
+                var oDiv = document.getElementById("dyfixed"),
+                        H = 0,
+                        Y = oDiv
+                while (Y) {
+                    H += Y.offsetTop;
+                    Y = Y.offsetParent;
+                }
+                window.onscroll = function()
+                {
+                    var s = document.body.scrollTop || document.documentElement.scrollTop
+                    if(s>H) {
+                        oDiv.style = "position:fixed;top:0;"
+                    } else {
+                        oDiv.style = ""
+                    }
+                }
+            }
+</script>
+</body>
+</html>

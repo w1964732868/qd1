@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝update2</title>
+    <link rel="stylesheet" href="css/iconfont.css" type="text/css">
+    <link rel="stylesheet" href="css/iconfont2.css" type="text/css">
+    <link rel="stylesheet" href="css/taobao.css">
+</head>
+<body>
+<!--头部-->
+<div class="panel-head">
+    <div class="head df aic jcsb">
+        <div class="lt">
+            <select class="l">
+                <option value="0">全球</option>
+                <option value="1" selected>中国大陆</option>
+                <option value="2">香港</option>
+                <option value="3">台湾</option>
+                <option value="4">澳门</option>
+                <option value="5">韩国</option>
+                <option value="6">马来西亚</option>
+                <option value="7">新加坡</option>
+                <option value="8">新西兰</option>
+                <option value="9">日本</option>
+                <option value="10">美国</option>
+            </select>
+            <a href="#3" class="l i">亲，请登录</a>
+            <a href="#3" class="l ii">免费注册</a>
+            <a href="#3" class="l ii">手机逛淘宝</a>
+        </div>
+        <div class="rt">
+            <select class="r i">
+                <option value="0" selected>我的淘宝</option>
+                <option value="1">已买到宝贝</option>
+                <option value="2">我的足迹</option>
+            </select>
+            <a href="#3" class="r ii">购物车</a>
+            <select class="r ii">
+                <option value="0" selected>收藏夹</option>
+                <option value="1">收藏的宝贝</option>
+                <option value="2">收藏的店铺</option>
+            </select>
+            <a href="#3" class="r i">商品分类</a>
+            <select class="r i">
+                <option value="0" selected>买家中心</option>
+                <option value="1">收藏的宝贝</option>
+                <option value="2">收藏的店铺</option>
+            </select>
+            <select class="r i">
+                <option value="0" selected>联系客服</option>
+                <option value="1">收藏的宝贝</option>
+                <option value="2">收藏的店铺</option>
+            </select>
+            <select class="r i">
+                <option value="0" selected>网站导航</option>
+                <option value="1">收藏的宝贝</option>
+                <option value="2">收藏的店铺</option>
+            </select>
+        </div>
+    </div>
+</div>
+<!--搜索-->
+<script  type="text/javascript">
+    window.onload=function (){
+        document.getElementById("t11").style.backgroundColor = "#FF4500";
+        document.getElementById("t11").style.color = "#FFFFFF";
+        document.getElementById("t11").style.borderTopRightRadius="5px";
+        document.getElementById("t11").style.borderTopLeftRadius="5px";
+        document.getElementById("tx11").style.backgroundColor = "#FFFFFF";
+        document.getElementById("tx11").style.color = "#FF0000";
+        document.getElementById("text11").style.backgroundColor = "#FFFFFF";
+        document.getElementById("text11").style.color = "#FF0000";
+    }
+    function changecolor(color)
+    {
+        document.getElementById("t11").style.backgroundColor = color;
+        document.getElementById("t11").style.color = "#FFFFFF";
+        document.getElementById("t11").style.borderTopRightRadius="5px";
+        document.getElementById("t11").style.borderTopLeftRadius="5px";
+        document.getElementById("tx11").style.backgroundColor = "#FFFFFF";
+        document.getElementById("tx11").style.color = "#FF0000";
+        document.getElementById("text11").style.backgroundColor = "#FFFFFF";
+        document.getElementById("text11").style.color = "#FF0000";
+    }
+    function changecolor2(color)
+    {
+        document.getElementById("t11").style.backgroundColor = "#FFFFFF";
+        document.getElementById("t11").style.color = "#FF0000";
+        document.getElementById("tx11").style.backgroundColor = color;
+        document.getElementById("tx11").style.color = "#FFFFFF";
+        document.getElementById("tx11").style.borderTopRightRadius="5px";
+        document.getElementById("tx11").style.borderTopLeftRadius="5px";
+        document.getElementById("text11").style.backgroundColor = "#FFFFFF";
+        document.getElementById("text11").style.color = "#FF0000";
+    }
+    function changecolor3(color)
+    {
+        document.getElementById("t11").style.backgroundColor = "#FFFFFF";
+        document.getElementById("t11").style.color = "#FF0000";
+        document.getElementById("tx11").style.backgroundColor = "#FFFFFF";
+        document.getElementById("tx11").style.color = "#FF0000";
+        document.getElementById("text11").style.backgroundColor = color;
+        document.getElementById("text11").style.color = "#FFFFFF";
+        document.getElementById("text11").style.borderTopRightRadius="5px";
+        document.getElementById("text11").style.borderTopLeftRadius="5px";
+    }
+</script>
+
+<!--<script type="text/javascript">-->
+    <!--window.onload=-->
+            <!--function(){-->
+                <!--var oDiv = document.getElementById("byfixed"),-->
+                        <!--H = 0,-->
+                        <!--Y = oDiv-->
+                <!--while (Y) {-->
+                    <!--H += Y.offsetTop;-->
+                    <!--Y = Y.offsetParent;-->
+                <!--}-->
+                <!--window.onscroll = function()-->
+                <!--{-->
+                    <!--var s = document.body.scrollTop || document.documentElement.scrollTop-->
+                    <!--if(s>H) {-->
+                        <!--oDiv.style = "position:fixed;top:0;"-->
+                    <!--} else {-->
+                        <!--oDiv.style = ""-->
+                    <!--}-->
+                <!--}-->
+            <!--}-->
+<!--</script>-->
+
+
+<div class="panel">
+<div class="panel-search df aic">
+    <a href="http://localhost:63342/MysqL/TaoBaoPage.html"><img src="img/淘宝.png" alt="" class = "img"></a>
+    <div class="rt jcc">
+        <div class="hd df">
+            <input type="button" id="t11"  class="t df jcc aic" value="宝贝" onclick="changecolor('orangered')" checked="checked">
+            <input type="button"  id="tx11" class="tx df jcc aic" value="天猫" onclick="changecolor2('orangered')">
+            <input type="button" id="text11"  class="text jcc df aic" value="店铺" onclick="changecolor3('orangered')">
+        </div>
+        <div class="by df">
+            <input type="text" class="iconfont icon-sousuo t" placeholder="&#xe62b 请输入关键词">
+            <input type="button" class="tx" value="搜索">
+        </div>
+
+        <!--<div id="dyfixed">-->
+            <!--<input type="text" class="iconfont icon-sousuo tby" placeholder="请输入关键词">-->
+            <!--<input type="button" class="txby" value="搜索">-->
+        <!--</div>-->
+
+        <div class="ft"></div>
+
+    </div>
+</div>
+</div>
+<!--超链接-->
+<div class="panel-navigation df">
+    <div class="navigation df">
+        <div class="lt df ">
+            <a href="#3" class="l df aic">主题市场</a>
+        </div>
+        <div class="rt df jcsa">
+            <a href="#3" class="r ii df aic">天猫</a>
+            <a href="#3" class="r df aic">聚划算</a>
+            <a href="#3" class="r i df aic">天猫超市</a>
+            <p class="t df aic">|</p>
+            <a href="#3" class="r df aic">淘抢购</a>
+            <a href="#3" class="r df aic">电器城</a>
+            <a href="#3" class="r i df aic">司法拍卖</a>
+            <a href="#3" class="r i df aic">淘宝心选</a>
+            <a href="#3" class="r i df aic">兴农扶贫</a>
+            <p class="t df aic">|</p>
+            <a href="#3" class="r i df aic">飞猪旅行</a>
+            <a href="#3" class="r i df aic">智能生活</a>
+            <a href="#3" class="r i df aic">苏宁易购</a>
+        </div>
+    </div>
+</div>
+<!--超链接加图片-->
+<div class="panel-img df">
+    <div class="lt">
+        <div class="l i nz">
+            <a href="#3" class="t" df aic>女装/</a>
+            <a href="#3" class="t" df aic>男装/</a>
+            <a href="#3" class="t" df aic>内衣</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t" df aic>鞋靴/</a>
+            <a href="#3" class="t" df aic>箱包/</a>
+            <a href="#3" class="t" df aic>配件</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="tx">童装玩具/</a>
+            <a href="#3" class="t">孕产/</a>
+            <a href="#3" class="t">用品</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t">家电/</a>
+            <a href="#3" class="t">数码/</a>
+            <a href="#3" class="t">手机</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t">美妆/</a>
+            <a href="#3" class="t">洗护/</a>
+            <a href="#3" class="text">保健品</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t">珠宝/</a>
+            <a href="#3" class="t">眼镜/</a>
+            <a href="#3" class="t">手表</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t">运动/</a>
+            <a href="#3" class="t">户外/</a>
+            <a href="#3" class="t">乐器</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t">游戏/</a>
+            <a href="#3" class="t">动漫/</a>
+            <a href="#3" class="t">影视</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t">美食/</a>
+            <a href="#3" class="t">生鲜/</a>
+            <a href="#3" class="t">零食</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3"  class="t">鲜花/</a>
+            <a href="#3" class="t">宠物/</a>
+            <a href="#3" class="t">农资</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t">工具/</a>
+            <a href="#3" class="t">装修/</a>
+            <a href="#3" class="t">建材</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t">家具/</a>
+            <a href="#3" class="t">家饰/</a>
+            <a href="#3" class="t">家纺</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t">汽车/</a>
+            <a href="#3" class="text">二手车/</a>
+            <a href="#3" class="t">用品</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t">汽车/</a>
+            <a href="#3" class="t">DIY/</a>
+            <a href="#3" class="tx">五金电子</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t">百货/</a>
+            <a href="#3" class="t">餐厨/</a>
+            <a href="#3" class="tx">家庭保健</a>
+        </div>
+
+        <div class="l i">
+            <a href="#3" class="t">学习/</a>
+            <a href="#3" class="t">卡券/</a>
+            <a href="#3" class="tx">本地服务</a>
+        </div>
+
+    </div>
+    <div class="ct df">
+        <div class="l">
+            <div class="all" id="all">
+                <div class="screen" id="screen">
+                    <ul id="ul">
+                        <li><img src="img/1.png" width="520" height="283" /></li>
+                        <li><img src="img/2.png" width="520" height="283" /></li>
+                        <li><img src="img/3.png" width="520" height="283" /></li>
+                        <li><img src="img/4.png" width="520" height="283" /></li>
+                        <li><img src="img/5.png" width="520" height="283" /></li>
+                    </ul>
+                    <ol></ol>
+                    <div id="arr df jcsb">
+                        <span class="iconfont icon-ico_leftarrow left"></span>
+                        <span class="iconfont icon-youjiantou right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="df jcsa">
+                <!--<img src="img/图片1.png" alt="">-->
+                <img src="img/图片11.png" alt="">
+                <img src="img/图片22.png" alt="">
+                <img src="img/图片33.png" alt="">
+                <img src="img/图片44.png" alt="">
+            </div>
+        </div>
+        <div class="r">
+            <div class="hd"><img src="img/图片2.png" alt="" ></div>
+            <div class="df"><img src="img/图片3.png" alt=""></div>
+        </div>
+    </div>
+    <div class="rt">
+        <!--<img src="img/图片5.png" alt="">-->
+        <div class="hd">
+            <img src="img/头像.png" alt="" class="img df jcc">
+            <p class="t df aic jcc">Hi! 你好</p>
+            <div class="tx df aic jcc">
+                <a href="#3" class="l df jcc">领淘金币抵钱</a>
+                <a href="#3" class="r df jcc">会员俱乐部</a>
+            </div>
+        </div>
+        <div class="by df aic jcsa">
+                <a href="#3" class="l i" name="登录">登录</a>
+                <a href="#3" class="c i" name="注册">注册</a>
+                <a href="#3" class="r i" name="开店">开店</a>
+        </div>
+        <div class="f df aic jcc">
+                <a href="#3">网上有害信息举报专区</a>
+        </div>
+        <div class="ft">
+            <div class="h df jcsa">
+                <a href="#3" class="t">公告</a>
+                <a href="#3" class="t">规则</a>
+                <a href="#3" class="t">论坛</a>
+                <a href="#3" class="t">安全</a>
+                <a href="#3" class="t">公益</a>
+            </div>
+            <div class="f df jcsa">
+                <div class="l">
+                    <div class="t df aic">淘宝1212活动招商</div>
+                    <div class="tx df aic">陌生人拼团上线</div>
+                </div>
+                <div class="r">
+                    <div class="t df aic">中差评功能升级</div>
+                    <div class="tx df aic">运营神器年中大促</div>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="fh i df">
+                <div class="f i">
+                    <img src="img/手机.png" alt="" class="img df jcc aic">
+                    <p class="t df aic jcc">充话费</p>
+                </div>
+                <div class="f i">
+                    <img src="img/手机.png" alt="" class="img df jcc aic">
+                    <p class="t df aic jcc">充话费</p>
+                </div>
+                <div class="f i">
+                    <img src="img/手机.png" alt="" class="img df jcc aic">
+                    <p class="t df aic jcc">充话费</p>
+                </div>
+                <div class="f i">
+                    <img src="img/手机.png" alt="" class="img df jcc aic">
+                    <p class="t df aic jcc">充话费</p>
+                </div>
+            </div>
+            <div class="fh i df">
+                <div class="f i">
+                    <img src="img/手机.png" alt="" class="img df jcc aic">
+                    <p class="t df aic jcc">充话费</p>
+                </div>
+                <div class="f i">
+                    <img src="img/手机.png" alt="" class="img df jcc aic">
+                    <p class="t df aic jcc">充话费</p>
+                </div>
+                <div class="f i">
+                    <img src="img/手机.png" alt="" class="img df jcc aic">
+                    <p class="t df aic jcc">充话费</p>
+                </div>
+                <div class="f i">
+                    <img src="img/手机.png" alt="" class="img df jcc aic">
+                    <p class="t df aic jcc">充话费</p>
+                </div>
+            </div>
+            <div class="fh i df">
+                <div class="f i">
+                    <img src="img/手机.png" alt="" class="img df jcc aic">
+                    <p class="t df aic jcc">充话费</p>
+                </div>
+                <div class="f i">
+                    <img src="img/手机.png" alt="" class="img df jcc aic">
+                    <p class="t df aic jcc">充话费</p>
+                </div>
+                <div class="f i">
+                    <img src="img/手机.png" alt="" class="img df jcc aic">
+                    <p class="t df aic jcc">充话费</p>
+                </div>
+                <div class="f i">
+                    <img src="img/手机.png" alt="" class="img df jcc aic">
+                    <p class="t df aic jcc">充话费</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="imge1 df jcsb">
+    <div class="lt df">
+        <div class="l aic">
+            <img src="img/头条.png" alt="" class="i df aic jcsa">
+            <p class="t df aic jcc">让你的生活更有趣</p>
+        </div>
+        <div class="r df">
+            <img src="img/头条1.png" alt="" class="i">
+            <div class="rx">
+                <p class="t df aic">万圣节去哪玩？良阅二次元游园会等你来！</p>
+                <p class="tx df aic">哈喽，大家好，我是你们的微漫酱！万圣节快要到了，在此推荐给大家一个好玩的二次元线下活动，一起来了解一下把！</p>
+            </div>
+        </div>
+    </div>
+    <div class="rt">
+        <div class="hd">
+            <p class="t df aic">阿里APP</p>
+        </div>
+        <div class="ft">
+            <div class="f i df jcsa">
+                <div class="img"><img src="img/天猫.png" alt=""></div>
+                <div class="img"><img src="img/天猫.png" alt=""></div>
+                <div class="img"><img src="img/天猫.png" alt=""></div>
+                <div class="img"><img src="img/天猫.png" alt=""></div>
+                <div class="img"><img src="img/天猫.png" alt=""></div>
+            </div>
+            <div class="f i df jcsa">
+                <div class="img"><img src="img/天猫.png" alt=""></div>
+                <div class="img"><img src="img/天猫.png" alt=""></div>
+                <div class="img"><img src="img/天猫.png" alt=""></div>
+                <div class="img"><img src="img/天猫.png" alt=""></div>
+                <div class="img"><img src="img/天猫.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--生活研究所-->
+<div class="panel-shenghuo">
+    <div class="hd df">
+        <a href="#3"><img src="img/shenghuo/生活.png" alt="" class="img"></a>
+        <p class="t">发现属于你的生活方式</p>
+    </div>
+    <div class="ft df jcsa">
+        <div class="f df jcsa">
+            <div class="l">
+                <a href="#3"><img src="img/shenghuo/生活1.png" alt="" class="img"></a>
+            </div>
+            <div class="r">
+                <a href="#3" class="t df aic">酷跑一族</a>
+                <a href="#3" class="tx  df aic">为健康打卡</a>
+                <a href="#3" class="text  df aic">人气14013</a>
+            </div>
+        </div>
+        <div class="f df jcsa">
+            <div class="l">
+                <a href="#3"><img src="img/shenghuo/生活2.png" alt="" class="img"></a>
+            </div>
+            <div class="r">
+                <a href="#3" class="t df aic">酷跑一族</a>
+                <a href="#3" class="tx  df aic">为健康打卡</a>
+                <a href="#3" class="text  df aic">人气14013</a>
+            </div>
+        </div>
+        <div class="f df jcsa">
+            <div class="l">
+                <a href="#3"><img src="img/shenghuo/生活3.png" alt="" class="img"></a>
+            </div>
+            <div class="r">
+                <a href="#3" class="t df aic">酷跑一族</a>
+                <a href="#3" class="tx  df aic">为健康打卡</a>
+                <a href="#3" class="text  df aic">人气14013</a>
+            </div>
+        </div>
+        <div class="f df jcsa">
+            <div class="l">
+                <a href="#3"><img src="img/shenghuo/生活4.png" alt="" class="img"></a>
+            </div>
+            <div class="r">
+                <a href="#3" class="t df aic">酷跑一族</a>
+                <a href="#3" class="tx  df aic">为健康打卡</a>
+                <a href="#3" class="text  df aic">人气14013</a>
+            </div>
+        </div>
+        <div class="f df jcsa">
+            <div class="l">
+                <a href="#3"><img src="img/shenghuo/生活5.png" alt="" class="img"></a>
+            </div>
+            <div class="r">
+                <a href="#3" class="t df aic">酷跑一族</a>
+                <a href="#3" class="tx  df aic">为健康打卡</a>
+                <a href="#3" class="text  df aic">人气14013</a>
+            </div>
+        </div>
+        <div class="f df jcsa">
+            <div class="l">
+                <a href="#3"><img src="img/shenghuo/生活6.png" alt="" class="img"></a>
+            </div>
+            <div class="r">
+                <a href="#3" class="t df aic">酷跑一族</a>
+                <a href="#3" class="tx  df aic">为健康打卡</a>
+                <a href="#3" class="text  df aic">人气14013</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--每日好货-->
+<div class="panel-haohuo df jcsb">
+    <div class="lt">
+        <div class="hd df">
+            <img src="img/有好货.png" alt="" class="img">
+            <p class="t">与品质生活不期而遇</p>
+        </div>
+        <div class="ft df jcsa">
+            <div class="f">
+                <a href="#3"><img src="img/衣服1.png" alt="" class = "img"></a>
+                <a href="#3" class = "t">MeetMetro 宽松立领套头上衣</a>
+                <a href="#3"  class = "tx">高领贴身设计，呈现纤长美颈凸显优雅唯美。</a>
+            </div>
+
+            <div class="f">
+                <a href="#3"><img src="img/衣服2.png" alt="" class = "img"></a>
+                <a href="#3" class = "t">Lonely Walk 抽绳工装束脚裤</a>
+                <a href="#3"  class = "tx">立体剪裁设计，突显宽松休闲。</a>
+            </div>
+
+            <div class="f">
+                <a href="#3"><img src="img/衣服3.png" alt="" class = "img"></a>
+                <a href="#3" class = "t">INSIDE 简约纯色宽松直筒牛仔裤</a>
+                <a href="#3"  class = "tx">品牌皮标清晰硬朗，装饰衣身显品味。</a>
+            </div>
+        </div>
+        <div class="ft df jcsa">
+            <div class="f">
+                <a href="#3"><img src="img/衣服4.png" alt="" class = "img"></a>
+                <a href="#3" class = "t">LA MER奢宠修护套装</a>
+                <a href="#3"  class = "tx">绵密精华乳霜，冰淇淋般的质地，融入肌底。深度滋养的面霜，促进肌肤修护焕新。浓缩修复精华露，裹覆肌肤，舒缓敏感干燥。</a>
+            </div>
+
+            <div class="f">
+                <a href="#3"><img src="img/衣服5.png" alt="" class = "img"></a>
+                <a href="#3" class = "t">惠尔顿 五点式车载儿童安全座椅</a>
+                <a href="#3"  class = "tx">实心注塑椅身，防撞抗压，更好保护安全。</a>
+            </div>
+
+            <div class="f">
+                <a href="#3"><img src="img/衣服6.png" alt="" class = "img"></a>
+                <a href="#3" class = "t">ER大码飞行夹克</a>
+                <a href="#3"  class = "tx">字母刺绣工艺，细节彰显品质，潮流感倍增。</a>
+            </div>
+        </div>
+    </div>
+    <div class="rt">
+        <div class="hd df">
+            <img src="img/爱逛街.png" alt="" class="img">
+            <p class="t">献给聪明可爱的你</p>
+        </div>
+        <div class="ft df jcsa">
+            <div class="f">
+                <a href="#3"><img src="img/衣服r1.png" alt="" class = "img"></a>
+                <a href="#3" class = "t">Oball奥波球 奥波滚滚乐婴儿健身推行学步柔软手抓球</a>
+                <a href="#3"  class = "tx">放飞自我的兔小姐</a>
+            </div>
+
+            <div class="f">
+                <a href="#3"><img src="img/衣服r2.png" alt="" class = "img"></a>
+                <a href="#3" class = "t">【预售】固特威汽车底盘装甲保护剂非自喷防锈胶隔音胶防腐颗粒胶</a>
+                <a href="#3"  class = "tx">潮范时光机</a>
+            </div>
+
+            <div class="f">
+                <a href="#3"> <img src="img/衣服r3.png" alt="" class = "img"></a>
+                <a href="#3" class = "t">美国Gofit肌肉按摩棒健身瑜伽滚轴筋膜棒滚轮瘦小腿运动放松狼牙</a>
+                <a href="#3"  class = "tx">潮流女孩girl</a>
+            </div>
+        </div>
+        <div class="ft df jcsa">
+            <div class="f">
+                <a href="#3"><img src="img/衣服r4.png" alt="" class = "img"></a>
+                <a href="#3" class = "t">51783 户外军迷用品迷彩战术背心轻量化特种兵战术马甲真人CS装备</a>
+                <a href="#3">放飞自我的兔小姐</a>
+            </div>
+
+            <div class="f">
+                <a href="#3"><img src="img/衣服r5.png" alt="" class = "img"></a>
+                <a href="#3" class = "t">十月妈咪孕妇内衣套装怀孕期莫代尔舒适有型哺乳文胸孕妇内衣内裤</a>
+                <a href="#3"  class = "tx">爱逛***01</a>
+            </div>
+
+            <div class="f">
+                <a href="#3"><img src="img/衣服r6.png" alt="" class = "img"></a>
+                <a href="#3" class = "t">日单欧美风鞋楦造型女士橡胶雨鞋高筒中筒4色入 微瑕疵随机发送</a>
+                <a href="#3"  class = "tx">放飞自我的兔小姐</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--海淘购-->
+<div class="panel-haitao">
+    <img src="img/淘抢购.png" alt="" class="img">
+    <div class="lcr df jcsa">
+        <div class="lt df">
+            <div class="lt"><a href="#3"><img src="img/淘1.png" alt=""></a></div>
+            <div class="rt">
+                <a href="#3">广西柳州正宗螺蛳粉330g*3包</a> <br>
+                <br>
+                <a href="#3">领劵减5元</a>
+                <br> <br><br> <br><br> <br>
+                <span style="color: red;font-size: 20px;">￥ 31.8 </span>&nbsp;<span style="text-decoration:line-through;">￥68.00</span>
+            </div>
+        </div>
+        <div class="ct df">
+            <div class="lt"><a href="#3"><img src="img/淘2.png" alt=""></a></div>
+            <div class="rt">
+                <a href="#3">欣园台湾进口黑豆芝麻粉500g</a><br>
+                <br>
+                <a href="#3">买3送1，买5送2</a>
+                <br> <br><br> <br><br> <br>
+                <span style="color: red;font-size: 20px;">￥ 99 </span>&nbsp;<span style="text-decoration:line-through;">￥160.00</span>
+            </div>
+        </div>
+        <div class="rt df">
+            <div class="lt"><a href="#3"> <img src="img/淘3.png" alt=""></a></div>
+            <div class="rt">
+                <a href="#3">男士外套春秋2018新款两件套装</a><br>
+                <br>
+                <a href="#3">爆款疯抢两件套</a>
+                <br> <br><br> <br><br> <br>
+                <span style="color: red;font-size: 20px;">￥ 183 </span>&nbsp;<span style="text-decoration:line-through;">￥380.00</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--反季-->
+<div class="panel-fanji">
+    <a href="#3"><img src="img/反季.png" alt=""></a>
+</div>
+<!--每日好店-->
+<div class="panel-haodian df jcsb">
+    <div class="left">
+        <div class="head df aic">
+            <img src="img/好店.png" alt="" class="img">
+            <p class="t">发现深藏的好店</p>
+        </div>
+        <div class="foot">
+            <div class="hd df jcsa">
+                <div class="lt">
+                    <div class="h df aic">
+                        <a href="#3" class="t">今日推荐</a>
+                        <a href="#3" class="tx">暂无店铺评价</a>
+                    </div>
+                    <div class="f df jcsa">
+                        <div><a href="#3"><img src="img/图11.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#3" class="r1"><img src="img/图12.png" alt="" class="img"></a>
+                            <a href="#3" class="r2"><img src="img/图13.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rt">
+                    <div class="h df aic">
+                        <a href="#3" class="t">女神の店</a>
+                        <a href="#3" class="tx">暂无店铺评价</a>
+                    </div>
+                    <div class="f df jcsa">
+                        <div><a href="#3"><img src="img/图21.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#3"><img src="img/图22.png" alt="" class="img"></a>
+                            <a href="#3"><img src="img/图23.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ft df jcsa">
+                <div class="lt">
+                    <div class="h df aic">
+                        <a href="#3" class="t">今日推荐</a>
+                        <a href="#3" class="tx">暂无店铺评价</a>
+                    </div>
+                    <div class="f df jcsa">
+                        <div><a href="#3"><img src="img/图11.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#3" class="r1"><img src="img/图12.png" alt="" class="img"></a>
+                            <a href="#3" class="r2"><img src="img/图13.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rt">
+                    <div class="h df aic">
+                        <a href="#3" class="t">女神の店</a>
+                        <a href="#3" class="tx">暂无店铺评价</a>
+                    </div>
+                    <div class="f df jcsa">
+                        <div><a href="#3"><img src="img/图21.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#3"><img src="img/图22.png" alt="" class="img"></a>
+                            <a href="#3"><img src="img/图23.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="head df aic">
+            <img src="img/淘宝直播.png" alt="" class="img">
+            <p class="t">发现深藏的好店</p>
+        </div>
+        <div class="foot">
+            <div class="hd df jcsa">
+                <div class="lt">
+                    <div class="h df aic">
+                        <a href="#3" class="t">胖哥小洲</a>
+                        <a href="#3" class="tx">1857观看</a>
+                    </div>
+                    <div class="f df jcsa">
+                        <div><a href="#3"><img src="img/图11.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#3"><img src="img/图12.png" alt="" class="img"></a>
+                            <a href="#3"><img src="img/图13.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rt">
+                    <div class="h df aic">
+                        <a href="#3" class="t">瑞瑞家品牌折扣</a>
+                        <a href="#3" class="tx">1406观看</a>
+                    </div>
+                    <div class="f df jcsa">
+                        <div><a href="#3"><img src="img/图21.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#3"><img src="img/图22.png" alt="" class="img"></a>
+                            <a href="#3"><img src="img/图23.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ft df jcsa">
+                <div class="lt">
+                    <div class="h df aic">
+                        <a href="#3" class="t">彩色娃娃amy</a>
+                        <a href="#3" class="tx">39408观看</a>
+                    </div>
+                    <div class="f df jcsa">
+                        <div><a href="#3"><img src="img/图11.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#3" class="r1"><img src="img/图32.png" alt="" class="img"></a>
+                            <a href="#3" class="r2"><img src="img/图33.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rt">
+                    <div class="h df aic">
+                        <a href="#3" class="t">小妖的衣橱</a>
+                        <a href="#3" class="tx">10267观看</a>
+                    </div>
+                    <div class="f df jcsa">
+                        <div><a href="#3"><img src="img/图41.png" alt="" class="img"></a></div>
+                        <div class="r">
+                            <a href="#3"><img src="img/图42.png" alt="" class="img"></a>
+                            <a href="#3"><img src="img/图43.png" alt="" class="img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--时尚爆料王-->
+    <div class="panel-baoliao df jcsb">
+        <div class="lt">
+            <div class="hd">
+                <p class="t df aic">时尚爆料王</p>
+            </div>
+            <div class="foot df">
+                <div class="ft">
+                    <div class="h">
+                        <a href="#3"><p  class="t df aic">腔调</p></a>
+                        <p class="tx df aic">全球创意设计师平台</p>
+                    </div>
+                    <div class="f df">
+                        <a href="#3"><img src="img/baoliao/爆料1.png" alt="" class="img"></a>
+                        <a href="#3"><img src="img/baoliao/爆料2.png" alt="" class="img"></a>
+                    </div>
+                </div>
+                <div class="ft">
+                    <div class="h">
+                        <a href="#3"><p  class="t df aic">腔调</p></a>
+                        <p class="tx df aic">全球创意设计师平台</p>
+                    </div>
+                    <div class="f df">
+                        <a href="#3"><img src="img/baoliao/爆料3.png" alt="" class="img"></a>
+                        <a href="#3"><img src="img/baoliao/爆料4.png" alt="" class="img"></a>
+                    </div>
+                </div>
+                <div class="ft">
+                    <div class="h">
+                        <a href="#3"><p  class="t df aic">腔调</p></a>
+                        <p class="tx df aic">全球创意设计师平台</p>
+                    </div>
+                    <div class="f df">
+                        <a href="#3"><img src="img/baoliao/爆料5.png" alt="" class="img"></a>
+                        <a href="#3"><img src="img/baoliao/爆料6.png" alt="" class="img"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rt">
+            <a href="#3"><img src="img/baoliao/爆料8.png" alt="" class="img"></a>
+        </div>
+    </div>
+<!--品质生活家-->
+    <div class="panel-pinzhi df jcsb">
+        <div class="left">
+            <div class="hd">
+                <p class="t df aic ">品质生活家</p>
+            </div>
+            <div class="ft df">
+                <div class="lt">
+                    <div class="h"><img src="img/pinzhi/品质1.png" alt="" class="img"></div>
+                    <div class="f df jcsa">
+                        <div class="l aic ">
+                            <p class="t df aic">极有家</p>
+                            <p class="tx df aic">过想过的生活</p>
+                        </div>
+                        <div class="r"><img src="img/pinzhi/品质2.png" alt=""></div>
+                    </div>
+                    <div class="f df jcsa">
+                        <div class="l">
+                            <p class="t df aic">极有家</p>
+                            <p class="tx df aic">过想过的生活</p>
+                        </div>
+                        <div class="r"><img src="img/pinzhi/品质3.png" alt=""></div>
+                    </div>
+                    <div class="f df jcsa">
+                        <div class="l">
+                            <p class="t df aic">极有家</p>
+                            <p class="tx df aic">过想过的生活</p>
+                        </div>
+                        <div class="r"><img src="img/pinzhi/品质4.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="rt">
+                    <div class="rh r">
+                        <div class="h df aic">
+                            <div><a href="#3"  class="t df aic">亲宝贝</a></div>
+                            <div class="tx df aic">享受育儿新方式</div>
+                        </div>
+                        <div class="f">
+                            <a href="#3"> <img src="img/pinzhi/品质5.png" alt=""></a>
+                            <a href="#3"> <img src="img/pinzhi/品质5.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="rb r">
+                        <div class="h df aic">
+                            <div><a href="#3"  class="t df aic">亲宝贝</a></div>
+                            <div class="tx df aic">享受育儿新方式</div>
+                        </div>
+                        <div class="f">
+                            <a href="#3"> <img src="img/pinzhi/品质5.png" alt=""></a>
+                            <a href="#3"> <img src="img/pinzhi/品质5.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="rf r">
+                        <div class="h df aic">
+                            <div><a href="#3"  class="t df aic">亲宝贝</a></div>
+                            <div class="tx df aic">享受育儿新方式</div>
+                        </div>
+                        <div class="f">
+                            <a href="#3"> <img src="img/pinzhi/品质5.png" alt=""></a>
+                            <a href="#3"> <img src="img/pinzhi/品质5.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="hd">
+                <p class="t df aic ">品质生活家</p>
+            </div>
+            <div class="ft df">
+                <div class="lt">
+                    <div class="h"><img src="img/pinzhi/品质1.png" alt="" class="img"></div>
+                    <div class="f df jcsa">
+                        <div class="l aic ">
+                            <p class="t df aic">极有家</p>
+                            <p class="tx df aic">过想过的生活</p>
+                        </div>
+                        <div class="r"><img src="img/pinzhi/品质2.png" alt=""></div>
+                    </div>
+                    <div class="f df jcsa">
+                        <div class="l">
+                            <p class="t df aic">极有家</p>
+                            <p class="tx df aic">过想过的生活</p>
+                        </div>
+                        <div class="r"><img src="img/pinzhi/品质3.png" alt=""></div>
+                    </div>
+                    <div class="f df jcsa">
+                        <div class="l">
+                            <p class="t df aic">极有家</p>
+                            <p class="tx df aic">过想过的生活</p>
+                        </div>
+                        <div class="r"><img src="img/pinzhi/品质4.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="rt">
+                    <div class="rh r">
+                        <div class="h df aic">
+                            <div><a href="#3"  class="t df aic">亲宝贝</a></div>
+                            <div class="tx df aic">享受育儿新方式</div>
+                        </div>
+                        <div class="f">
+                            <a href="#3"> <img src="img/pinzhi/品质5.png" alt=""></a>
+                            <a href="#3"> <img src="img/pinzhi/品质5.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="rb r">
+                        <div class="h df aic">
+                            <div><a href="#3"  class="t df aic">亲宝贝</a></div>
+                            <div class="tx df aic">享受育儿新方式</div>
+                        </div>
+                        <div class="f">
+                            <a href="#3"> <img src="img/pinzhi/品质5.png" alt=""></a>
+                            <a href="#3"> <img src="img/pinzhi/品质5.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="rf r">
+                        <div class="h df aic">
+                            <div><a href="#3"  class="t df aic">亲宝贝</a></div>
+                            <div class="tx df aic">享受育儿新方式</div>
+                        </div>
+                        <div class="f">
+                            <a href="#3"> <img src="img/pinzhi/品质5.png" alt=""></a>
+                            <a href="#3"> <img src="img/pinzhi/品质5.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--实惠专业户-->
+    <div class="panel-shihui">
+        <div class="hd df aic">
+            <p class="t df aic">实惠专业户</p>
+        </div>
+        <div class="foot df">
+            <div class="ft">
+                <div class="h df aic">天天特价</div>
+                <div class="f df jcsa aic">
+                    <div><img src="img/shihui/实惠1.png" alt=""  class="img"></div>
+                    <div class="r">
+                        <p class="t  df aic">优惠好货</p>
+                        <p class="tx  df aic">特价专区</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ft">
+                <div class="h df aic">天天特价</div>
+                <div class="f df jcsa aic">
+                    <div><img src="img/shihui/实惠2.png" alt=""  class="img"></div>
+                    <div class="r">
+                        <p class="t  df aic">优惠好货</p>
+                        <p class="tx  df aic">特价专区</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ft">
+                <div class="h df aic">天天特价</div>
+                <div class="f df jcsa aic">
+                    <div><img src="img/shihui/实惠3.png" alt=""  class="img"></div>
+                    <div class="r">
+                        <p class="t  df aic">优惠好货</p>
+                        <p class="tx  df aic">特价专区</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ft">
+                <div class="h df aic">天天特价</div>
+                <div class="f df jcsa aic">
+                    <div><img src="img/shihui/实惠4.png" alt=""  class="img"></div>
+                    <div class="r">
+                        <p class="t  df aic">优惠好货</p>
+                        <p class="tx  df aic">特价专区</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ft">
+                <div class="h df aic">天天特价</div>
+                <div class="f df jcsa aic">
+                    <div><img src="img/shihui/实惠5.png" alt=""  class="img"></div>
+                    <div class="r">
+                        <p class="t  df aic">优惠好货</p>
+                        <p class="tx  df aic">特价专区</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--热卖单品-->
+    <div class="panel-remai">
+        <div class="hd">
+            <div class="h df aic"><p class="t">热卖单品</p></div>
+            <p class="f df jcsa">
+                <a href="#3">ac围巾</a>
+                <a href="#3">红围巾</a>
+                <a href="#3">围巾男</a>
+                <a href="#3">围巾女</a>
+                <a href="#3">披肩</a>
+                <a href="#3">丝巾</a>
+                <a href="#3">牛仔服</a>
+                <a href="#3">外套男</a>
+                <a href="#3">卫衣</a>
+            </p>
+        </div>
+        <div class="foot">
+            <div class="ft df">
+                <div class="f">
+                    <img src="img/remai/remai1.png" alt="" class="img">
+                    <p class="t df aic">皮尔卡丹夹克2018新款春秋男士薄外套休闲商务中年男装翻领茄克衫</p>
+                    <p class="tx df aic">舒适简约翻领</p>
+                    <p class="p df aic">￥145</p>
+                </div>
+                <div class="f">
+                    <img src="img/remai/remai2.png" alt="" class="img">
+                    <p class="t df aic">皮尔卡丹夹克2018新款春秋男士薄外套休闲商务中年男装翻领茄克衫</p>
+                    <p class="tx df aic">舒适简约翻领</p>
+                    <p class="p df aic">￥145</p>
+                </div>
+                <div class="f">
+                    <img src="img/remai/remai3.png" alt="" class="img">
+                    <p class="t df aic">皮尔卡丹夹克2018新款春秋男士薄外套休闲商务中年男装翻领茄克衫</p>
+                    <p class="tx df aic">舒适简约翻领</p>
+                    <p class="p df aic">￥145</p>
+                </div>
+                <div class="f">
+                    <img src="img/remai/remai4.png" alt="" class="img">
+                    <p class="t df aic">皮尔卡丹夹克2018新款春秋男士薄外套休闲商务中年男装翻领茄克衫</p>
+                    <p class="tx df aic">舒适简约翻领</p>
+                    <p class="p df aic">￥145</p>
+                </div>
+                <div class="f">
+                    <img src="img/remai/remai5.png" alt="" class="img">
+                    <p class="t df aic">皮尔卡丹夹克2018新款春秋男士薄外套休闲商务中年男装翻领茄克衫</p>
+                    <p class="tx df aic">舒适简约翻领</p>
+                    <p class="p df aic">￥145</p>
+                </div>
+            </div>
+            <div class="ft df">
+                <div class="f">
+                    <img src="img/remai/remai1.png" alt="" class="img">
+                    <p class="t df aic">皮尔卡丹夹克2018新款春秋男士薄外套休闲商务中年男装翻领茄克衫</p>
+                    <p class="tx df aic">舒适简约翻领</p>
+                    <p class="p df aic">￥145</p>
+                </div>
+                <div class="f">
+                    <img src="img/remai/remai2.png" alt="" class="img">
+                    <p class="t df aic">皮尔卡丹夹克2018新款春秋男士薄外套休闲商务中年男装翻领茄克衫</p>
+                    <p class="tx df aic">舒适简约翻领</p>
+                    <p class="p df aic">￥145</p>
+                </div>
+                <div class="f">
+                    <img src="img/remai/remai3.png" alt="" class="img">
+                    <p class="t df aic">皮尔卡丹夹克2018新款春秋男士薄外套休闲商务中年男装翻领茄克衫</p>
+                    <p class="tx df aic">舒适简约翻领</p>
+                    <p class="p df aic">￥145</p>
+                </div>
+                <div class="f">
+                    <img src="img/remai/remai4.png" alt="" class="img">
+                    <p class="t df aic">皮尔卡丹夹克2018新款春秋男士薄外套休闲商务中年男装翻领茄克衫</p>
+                    <p class="tx df aic">舒适简约翻领</p>
+                    <p class="p df aic">￥145</p>
+                </div>
+                <div class="f">
+                    <img src="img/remai/remai5.png" alt="" class="img">
+                    <p class="t df aic">皮尔卡丹夹克2018新款春秋男士薄外套休闲商务中年男装翻领茄克衫</p>
+                    <p class="tx df aic">舒适简约翻领</p>
+                    <p class="p df aic">￥145</p>
+                </div>
+            </div>
+            <div class="f df jcsa">
+                <a href="#3"><img src="img/remai/remai61.png" alt="" class="lt i"></a>
+                <a href="#3"><img src="img/remai/remai62.png" alt="" class="ct i"></a>
+                <a href="#3"><img src="img/remai/remai63.png" alt="" class="rt i"></a>
+            </div>
+        </div>
+    </div>
+<!--猜你喜欢-->
+    <div class="panel-xihuan">
+        <div class="hd df aic">
+                <p class="t df aic">猜你喜欢</p>
+        </div>
+        <div class="foot">
+           <div class="ft df">
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢1.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p df aic">￥256</p>
+               </div>
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢2.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢3.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢4.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢5.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+           </div>
+           <div class="ft df">
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢1.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢2.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢3.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢4.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢5.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+           </div>
+           <div class="ft df">
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢1.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢2.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢3.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢4.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+               <div class="f">
+                   <a href="#3"><img src="img/xihuan/喜欢5.png" alt="" class="img"></a>
+                   <p class="t df aic">抗皱不起球 高端意大利进口羊毛夹克男 保暖夹棉加厚毛呢外套男士</p>
+                   <p class="p  df aic">￥256</p>
+               </div>
+           </div>
+        </div>
+    </div>
+
+<script>
+    //需求:无缝轮播图
+    //步骤:
+    //1.老三步。获取相关元素。
+    //2.补齐相互盒子
+    //1.复制第一张图片所在的li,填入所在的ul中。
+    //2.生成相关的ol中的li。
+    //3.点亮第一个ol中的li。
+    //3.鼠标放到小方块儿上,轮播图片。
+    //4.添加定时器。
+    //5.左右切换的按钮。
+
+
+
+
+
+
+    //1.老三步。获取相关元素。
+    var box = document.getElementById("all");
+    var ul = box.children[0].children[0];
+    var ol = box.children[0].children[1];
+    var ulLiArr = ul.children;
+    //2.补齐相互盒子
+    //1.复制第一张图片所在的li,填入所在的ul中。
+    var newLi = ulLiArr[0].cloneNode(true);
+    ul.appendChild(newLi);
+    //2.生成相关的ol中的li。
+    for(var i=0;i<ulLiArr.length-1;i++){
+        var newOlLi = document.createElement("li");
+        newOlLi.innerHTML = i+1;
+        ol.appendChild(newOlLi);
+    }
+    //3.点亮第一个ol中的li。
+    var olLiArr = ol.children;
+    ol.children[0].className = "current";
+    //3.鼠标放到小方块儿上,轮播图片。
+    for(var i=0;i<olLiArr.length;i++){
+        olLiArr[i].index = i;
+        olLiArr[i].onmouseover = function () {
+            for(var j=0;j<olLiArr.length;j++){
+                olLiArr[j].className = "";
+            }
+            olLiArr[this.index].className = "current";
+            animate(ul,-this.index*ul.children[0].offsetWidth);
+            key = square = this.index;
+        }
+    }
+    //4.添加定时器。
+    var timer = null;
+    var key = 0;
+    var square = 0;
+    timer = setInterval(autoPlay,2000);
+
+
+    function autoPlay(){
+        key++;
+        square++;
+        if(key>olLiArr.length){
+            key=1;
+            ul.style.left = 0;
+        }
+        animate(ul,-key*ul.children[0].offsetWidth);
+
+
+        square = square>olLiArr.length-1?0:square;
+        for(var j=0;j<olLiArr.length;j++){
+            olLiArr[j].className = "";
+        }
+        olLiArr[square].className = "current";
+    }
+    //5.鼠标移开开启定时器,鼠标放上去开启定时器。
+    box.onmouseover = function () {
+        clearInterval(timer);
+    }
+    box.onmouseout = function () {
+        timer = setInterval(autoPlay,2000);
+    }
+    //6.左右切换的按钮。
+    var btnArr = box.children[0].children[2].children;
+    btnArr[0].onclick = function () {
+        key--;
+        square--;
+        if(key<0){
+            key=4;
+            ul.style.left = -5*ul.children[0].offsetWidth + "px";
+        }
+        animate(ul,-key*ul.children[0].offsetWidth);
+
+
+        square = square<0?olLiArr.length-1:square;
+        for(var j=0;j<olLiArr.length;j++){
+            olLiArr[j].className = "";
+        }
+        olLiArr[square].className = "current";
+    }
+    btnArr[1].onclick = function () {
+        autoPlay();
+    }
+
+
+
+
+
+
+
+
+    //  基本封装
+    function animate(obj,target) {
+        clearInterval(obj.timer);
+        var speed = obj.offsetLeft < target ? 15 : -15;
+        obj.timer = setInterval(function() {
+            var result = target - obj.offsetLeft;
+            obj.style.left = obj.offsetLeft + speed  + "px";
+            if(Math.abs(result) <= 15) {
+                obj.style.left = target + "px";
+                clearInterval(obj.timer);
+            }
+        },10);
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

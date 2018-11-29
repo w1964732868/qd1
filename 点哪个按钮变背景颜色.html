@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        window.onload=function()
+        {
+            var theBd=document.getElementById('bd');
+            var theBtns=document.getElementsByTagName('input');
+            var arr=['red','blue','green'];
+            var i;
+            for(i=0;i<theBtns.length;i++)
+            {
+                theBtns[i].index=i;
+                theBtns[i].onclick=function()
+                {
+                    theBd.style.background=arr[this.index];
+                }
+            }
+        }
+
+
+//        function changecolor(color)
+//        {
+//            document.getElementById("bo").style.backgroundColor = color;
+//        }
+
+
+    </script>
+</head>
+<body id="bd">
+<input type="button" value="变红">
+<input type="button" value="变蓝">
+<input type="button" value="变绿">
+</body>
+
+
+<!--<body id="bo">-->
+<!--<input type="button" onclick="changecolor('red')" id="red">-->
+<!--<input type="button" onclick="changecolor('green')" id="green">-->
+<!--<input type="button" onclick="changecolor('blue')" id="blue">-->
+<!--</body>-->
+
+
+
+</html>

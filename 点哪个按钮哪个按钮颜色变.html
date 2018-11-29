@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        window.onload = function(){
+            document.getElementById("bo1").style.backgroundColor = "red";
+            document.getElementById("bo2").style.backgroundColor = "#FFFFFF";
+            document.getElementById("bo3").style.backgroundColor = "#FFFFFF";
+        }
+
+
+        function changecolor(color)
+        {
+            document.getElementById("bo1").style.backgroundColor = color;
+            document.getElementById("bo2").style.backgroundColor = "#FFFFFF";
+            document.getElementById("bo3").style.backgroundColor = "#FFFFFF";
+        }
+        function changecolor2(color)
+        {
+            document.getElementById("bo1").style.backgroundColor = "#FFFFFF";
+            document.getElementById("bo2").style.backgroundColor = color;
+            document.getElementById("bo3").style.backgroundColor = "#FFFFFF";
+        }
+        function changecolor3(color)
+        {
+            document.getElementById("bo1").style.backgroundColor = "#FFFFFF";
+            document.getElementById("bo2").style.backgroundColor = "#FFFFFF";
+            document.getElementById("bo3").style.backgroundColor = color;
+        }
+    </script>
+
+
+
+<body>
+<input type="button" onclick="changecolor('red')" id="bo1" value="登陆">
+<input type="button" onclick="changecolor2('red')" id="bo2" value="注册">
+<input type="button" onclick="changecolor3('red')" id="bo3" value="开店">
+</body>
+
+
+
+</html>
